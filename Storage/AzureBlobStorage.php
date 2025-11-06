@@ -31,7 +31,7 @@ class AzureBlobStorage implements StorageInterface
     public function __construct(string $accountName, string $accountKey, string $containerName)
     {
         // Build the connection string
-        $this->connectionString = sprintf('"DefaultEndpointsProtocol=https;AccountName=%s;AccountKey=%s;EndpointSuffix=core.windows.net', $accountName, $accountKey);
+        $this->connectionString = sprintf('DefaultEndpointsProtocol=https;AccountName=%s;AccountKey=%s;EndpointSuffix=core.windows.net', $accountName, $accountKey);
         $this->container = $containerName;
 
         $this->initializeBlobClient();
